@@ -1,0 +1,94 @@
+/* ============================================================
+   SIMS — Role Selection Cards  (select_role.php)
+   ============================================================ */
+
+.roles {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+/* ── Base card ── */
+.roles a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1.75rem 1rem;
+  background: #f5ede0;
+  /* warm beige card face */
+  color: var(--c-text);
+  font-family: 'Outfit', sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  border: 1px solid #333333;
+  border-radius: var(--radius);
+  transition: all var(--transition);
+  gap: .6rem;
+  position: relative;
+  overflow: hidden;
+}
+
+/* per-card glow colour */
+.roles a:nth-child(1) {
+  --card-glow: #c0392b;
+}
+
+.roles a:nth-child(2) {
+  --card-glow: #c9a97a;
+}
+
+.roles a:nth-child(3) {
+  --card-glow: #e63946;
+}
+
+/* radial glow blob (hidden by default) */
+.roles a::before {
+  content: '';
+  position: absolute;
+  top: -40%;
+  left: -40%;
+  width: 80%;
+  height: 80%;
+  background: radial-gradient(circle, var(--card-glow, #c0392b) 0%, transparent 70%);
+  opacity: 0;
+  transition: opacity var(--transition);
+  pointer-events: none;
+  filter: blur(30px);
+}
+
+.roles a:hover::before {
+  opacity: .45;
+}
+
+/* ── Icon circle ── */
+.roles a .role-icon {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  background: rgba(232, 213, 183, 0.07);
+  border: 1px solid var(--c-border);
+  transition: all var(--transition);
+}
+
+/* ── Hover state ── */
+.roles a:hover {
+  background: #8b0000;
+  /* dark crimson so white text is readable */
+  border-color: #c0392b;
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35), 0 0 30px rgba(192, 57, 43, 0.5);
+  color: #fff;
+}
+
+.roles a:hover .role-icon {
+  background: var(--grad-btn);
+  border-color: transparent;
+  box-shadow: 0 0 18px rgba(192, 57, 43, 0.6);
+}

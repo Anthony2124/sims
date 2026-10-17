@@ -1,0 +1,49 @@
+/* ============================================================
+   SIMS — Design Tokens · Red & Beige Edition
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500&display=swap');
+
+/* ── Design Tokens ── */
+:root {
+  --c-bg: #2d2d2d;
+  /* dark grey background */
+  --c-surface: #ffffff;
+  --c-card: #ffffff;
+  /* white box */
+  --c-border: #cccccc;
+  /* light grey input borders */
+  --c-border-h: #999999;
+  --c-text: #333333;
+  /* dark text for white box */
+  --c-muted: #777777;
+  --c-label: #444444;
+  /* dark labels */
+
+  /* Reds */
+  --c-red: #8b0000;
+  --c-red-h: #a52a2a;
+  --c-red-deep: #800000;
+  --c-crimson: #b22222;
+
+  /* Beiges */
+  --c-beige: #e8d5b7;
+  --c-beige-l: #f5ede0;
+  --c-beige-d: #c9a97a;
+
+  --c-danger: #f87171;
+  --c-success: #6fcf97;
+
+  /* Solid Colors overriding gradients for this theme */
+  --grad-main: #800000;
+  --grad-btn: #800000;
+  --grad-beige: #800000;
+
+  --radius-sm: 6px;
+  --radius: 8px;
+  --radius-lg: 12px;
+  --blur: none;
+  --shadow-glow: 0 5px 25px rgba(0, 0, 0, 0.4);
+  --shadow-card: 0 4px 15px rgba(0, 0, 0, 0.2);
+  --transition: 0.22s cubic-bezier(0.4, 0, 0.2, 1);
+}

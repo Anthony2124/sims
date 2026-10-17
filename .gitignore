@@ -1,0 +1,17 @@
+# Secrets — never commit (holds live DB + Gmail app password)
+config.php
+
+# Real student data (PII) — excluded from the public repo
+sql/sims.sql
+assets/uploads/*
+!assets/uploads/profile/
+assets/uploads/profile/*
+!assets/uploads/profile/.gitkeep
+
+# Dependencies (restore with: composer require phpmailer/phpmailer)
+vendor/
+
+# OS / editor noise
+.DS_Store
+Thumbs.db
+*.log
